@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public interface IDamage
+{
+    public void TakeDamage(int damage); //데미지를 받았다.
+}
+
 // 프로젝타일을 생성관리, 발사 작업
 public class Weapon : MonoBehaviour
 {
@@ -56,6 +61,8 @@ public class Weapon : MonoBehaviour
             // obj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             // obj.GetComponent<Movement2D>().MoveTo(Vector2.up);
 
+            //int randNum = Random.Range(0, 9); //8번까지 있지만 9번 아래로 나타내야해서, (8,9케바케)
+            //obj = ObjectPoolManager.Inst.pools[randNum].Pop();
             obj = ObjectPoolManager.Inst.pools[(int)ObjectType.OT_Projectile_01].Pop();
             obj.transform.position = transform.position;
             obj.transform.rotation = Quaternion.identity;

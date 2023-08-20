@@ -6,8 +6,16 @@ public class Movement2D : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed = 0f;
+    public float MoveSpeed
+    {
+        set => moveSpeed = value;
+    }
     [SerializeField]
     private Vector3 moveDirection = Vector3.zero;
+    public Vector3 MoveDir
+    {
+        set => moveDirection = value;
+    }
 
     private bool isInit = false;
 

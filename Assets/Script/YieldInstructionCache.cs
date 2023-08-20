@@ -8,7 +8,7 @@ internal static class YieldInstructionCache
     public static readonly WaitForFixedUpdate WaitForFixedUpdate = new WaitForFixedUpdate();
     private static readonly Dictionary<float, WaitForSeconds> waitForSeconds = new Dictionary<float, WaitForSeconds>();
 
-        public static WaitForSeconds WaitForSeconds(float seconds)
+    public static WaitForSeconds WaitForSeconds(float seconds)
     {
         WaitForSeconds wfs;
 
